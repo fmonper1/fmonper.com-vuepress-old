@@ -6,30 +6,41 @@ module.exports = {
   base: "/",
 
   head: [
-    ["link", { rel: "icon", href: "/favicon.png" }],
     [
-      "script",
-      {
-        "data-ad-client": "ca-pub-5292448735527681",
-        async: true,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-      },
+      "link",
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.png" },
     ],
+    // [
+    //   "script",
+    //   {
+    //     "data-ad-client": "ca-pub-5292448735527681",
+    //     async: true,
+    //     src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+    //   },
+    // ],
   ],
 
   plugins: [
     [
       "@vuepress/blog",
       {
+        globalPagination: {
+          lengthPerPage: 6,
+        },
         directories: [
           {
+            title: "Blog",
             id: "post",
             dirname: "_posts",
             path: "/blog/",
+            // Layout of the `entry page`
             layout: "BlogIndex",
-            itemlayout: "Page",
+            // Layout of the `scope page`
+            scopeLayout: "Page",
+            itemPermalink: "/post/:slug.html",
             pagination: {
-              lengthPerPage: 6,
+              lengthPerPage: 3,
+              layout: "BlogIndex",
             },
           },
         ],
@@ -38,11 +49,13 @@ module.exports = {
             id: "tag",
             keys: ["tag", "tags"],
             path: "/tag/",
-            layout: "Tag",
-            frontmatter: { title: "Tag" },
-            itemlayout: "Tag",
+            // Layout of the `entry page`
+            layout: "Tags",
+            // Layout of the `scope page`
+            scopeLayout: "Tag",
             pagination: {
-              perPagePosts: 3,
+              lengthPerPage: 3,
+              layout: "Tags",
             },
           },
         ],

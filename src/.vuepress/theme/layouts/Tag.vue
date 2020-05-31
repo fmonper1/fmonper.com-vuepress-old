@@ -1,11 +1,11 @@
 <template>
   <div class="section">
-    <div class="w-full max-w-lg mx-auto p-8">
-      <ul id="default-layout">
-        <li v-for="tag in $tag.list">
-          <router-link class="page-link" :to="tag.path">{{
-            tag.name
-          }}</router-link>
+    <div class="w-full max-w-screen-lg mx-auto p-8">
+      <ul id="default-layout" v-if="$pagination.pages">
+        <li v-for="page in $pagination.pages">
+          <router-link class="page-link" :to="page.path">
+            {{ page.title }}
+          </router-link>
         </li>
       </ul>
     </div>
