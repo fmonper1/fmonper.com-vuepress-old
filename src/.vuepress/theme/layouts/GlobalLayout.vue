@@ -4,10 +4,13 @@
       <router-link to="/">
         {{ $site.title }}
       </router-link>
-      <nav>
-        <router-link to="/blog/" class="mr-4">Blog</router-link>
-        <router-link to="/tag/">Tag</router-link>
-      </nav>
+      <div class="flex">
+        <SearchBox class="mr-4" />
+        <nav>
+          <router-link to="/blog/" class="mr-4">Blog</router-link>
+          <router-link to="/tag/">Tag</router-link>
+        </nav>
+      </div>
     </header>
     <DefaultGlobalLayout />
     <footer style="background-color: #ddd;">
@@ -21,9 +24,9 @@
 
 <script>
 import GlobalLayout from "@app/components/GlobalLayout.vue";
-
+import SearchBox from "@SearchBox";
 export default {
-  components: { DefaultGlobalLayout: GlobalLayout },
+  components: { DefaultGlobalLayout: GlobalLayout, SearchBox },
 };
 </script>
 

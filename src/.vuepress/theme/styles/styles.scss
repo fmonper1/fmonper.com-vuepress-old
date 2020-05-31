@@ -2,6 +2,8 @@
 
 @tailwind base;
 
+@import "./prism";
+
 h1 {
   @apply text-5xl  text-heading my-4;
   font-family: "Arvo", serif;
