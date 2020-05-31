@@ -91,14 +91,14 @@ module.exports = {
     [
       "@vuepress/google-analytics",
       {
-        ga: "UA-100718537-5", // UA-00000000-0
+        ga: "UA-100718537-8", // UA-00000000-0
       },
     ],
     [
       "disqus",
       {
-        shortname: "csgoconsole",
-        url: "https://csgoconsole.com",
+        shortname: "fmonpercom",
+        url: "https://fmonper.com",
       },
     ],
     [
@@ -109,15 +109,6 @@ module.exports = {
       },
     ],
   ],
-  themeConfig: {
-    logo: "/logo.png",
-    domain: "https://csgoconsole.com",
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Blog", link: "/blog/" },
-    ],
-    displayAllHeaders: true, // Default: false
-  },
   postcss: {
     plugins: [
       require("tailwindcss")("./tailwind.js"),
