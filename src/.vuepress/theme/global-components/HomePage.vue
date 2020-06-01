@@ -25,15 +25,12 @@
         </p>
 
         <p>I am currently <a href="#" class="underline">unemployed.</a></p>
-        <i class="devicon-nodejs-plain text-5xl"></i>
-        <i class="devicon-express-original text-5xl"></i>
-        <i class="devicon-react-original text-5xl"></i>
-        <i class="devicon-vuejs-plain text-5xl"></i>
-        <i class="devicon-sass-original text-5xl"></i>
-        <i class="devicon-git-plain text-5xl"></i>
-        <i class="devicon-visualstudio-plain text-5xl"></i>
-        <i class="devicon-javascript-plain text-5xl"></i>
-        <i class="devicon-typescript-plain text-5xl"></i>
+        <div class="flex justify-between md:w-1/2">
+          <i class="devicon-express-original text-5xl"></i>
+          <i class="devicon-vuejs-plain text-5xl"></i>
+          <i class="devicon-react-plain text-5xl"></i>
+          <i class="devicon-javascript-plain text-5xl"></i>
+        </div>
       </div>
     </div>
 
@@ -112,7 +109,8 @@
                 </a>
               </h3>
               <p>
-                I had the chance to develop a virtual reality game for the NCA
+                I had the chance to develop a virtual reality game for the
+                <a href="https://www.nationalcrimeagency.gov.uk/">NCA</a>
                 as my dissertation project.
               </p>
               <p>

@@ -3,6 +3,7 @@
 @tailwind base;
 
 @import "./prism";
+@import "./searchBox";
 
 h1 {
   @apply text-5xl  text-heading my-4;

@@ -5,11 +5,11 @@
         {{ $site.title }}
       </router-link>
       <div class="flex">
-        <SearchBox class="mr-4" />
         <nav>
           <router-link to="/blog/" class="mr-4">Blog</router-link>
           <router-link to="/tag/">Tag</router-link>
         </nav>
+        <SearchBox class="block ml-4" />
       </div>
     </header>
     <DefaultGlobalLayout />

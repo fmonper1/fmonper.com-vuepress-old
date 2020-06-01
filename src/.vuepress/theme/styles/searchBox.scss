@@ -1,0 +1,16 @@
+.search-box {
+  @apply text-paragraph  right-0;
+
+  input {
+    @apply static;
+
+    &:focus {
+      @apply border-accent;
+    }
+  }
+  .suggestions {
+  }
+  .suggestion {
+    @apply text-paragraph;
+  }
+}
