@@ -1,10 +1,12 @@
 <template>
   <div id="global-layout">
-    <header class="bg-section p-4 text-paragraph flex justify-between">
+    <header
+      class="bg-section p-4 text-paragraph flex items-center justify-between"
+    >
       <router-link to="/">
         {{ $site.title }}
       </router-link>
-      <div class="flex">
+      <div class="flex items-center">
         <nav>
           <router-link to="/blog/" class="mr-4">Blog</router-link>
           <router-link to="/tag/">Tag</router-link>

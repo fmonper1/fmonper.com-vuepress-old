@@ -3,7 +3,7 @@
 
   input {
     @apply static;
-
+    padding: 0.5rem 0 0.5rem 2rem;
     &:focus {
       @apply border-accent;
     }

@@ -12,7 +12,9 @@ import {
   faReact,
   faNodeJs,
   faVuejs,
-  faExp,
+  faGithub,
+  faCodepen,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 export default {
   name: "fa-icon",
@@ -28,6 +30,12 @@ export default {
           return faVuejs;
         case "node":
           return faNodeJs;
+        case "github":
+          return faGithub;
+        case "codepen":
+          return faCodepen;
+        case "linkedin":
+          return faLinkedin;
 
         default:
           return "";
