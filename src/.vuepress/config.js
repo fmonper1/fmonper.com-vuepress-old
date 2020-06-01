@@ -44,8 +44,24 @@ module.exports = {
             // Layout of the `entry page`
             layout: "BlogIndex",
             // Layout of the `scope page`
-            scopeLayout: "Page",
+            scopeLayout: "",
             itemPermalink: "/post/:slug.html",
+            pagination: {
+              lengthPerPage: 3,
+              layout: "BlogIndex",
+            },
+          },
+
+          {
+            title: "Projects",
+            id: "projects",
+            dirname: "_projects",
+            path: "/projects/",
+            // Layout of the `entry page`
+            layout: "BlogIndex",
+            // Layout of the `scope page`
+            scopeLayout: "Page",
+            itemPermalink: "/project/:slug.html",
             pagination: {
               lengthPerPage: 3,
               layout: "BlogIndex",

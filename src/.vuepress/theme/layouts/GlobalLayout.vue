@@ -8,15 +8,15 @@
       </router-link>
       <div class="flex items-center">
         <nav>
-          <router-link to="/blog/" class="mr-4">Blog</router-link>
-          <router-link to="/tag/">Tag</router-link>
+          <router-link to="/projects/" class="mr-4">Projects</router-link>
+          <router-link to="/blog/" class="">Blog</router-link>
         </nav>
         <SearchBox class="block ml-4" />
       </div>
     </header>
     <DefaultGlobalLayout />
-    <footer style="background-color: #ddd;">
-      <a href="https://github.com/fmonper1/fmonper.com">
+    <footer class="bg-accent text-heading py-4 px-8">
+      <a href="https://github.com/fmonper1/fmonper.com" class="text-heading">
         Github
       </a>
       · Powered by VuePress

@@ -2,8 +2,6 @@
   <div class="section">
     <div class="w-full max-w-screen-md mx-auto p-8">
       <Content />
-      <h3>Tags</h3>
-      <PostTags :data="$page.frontmatter.tag" />
       <div id="pagination" v-if="$pagination">
         <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">
           Prev
@@ -17,10 +15,7 @@
 </template>
 
 <script>
-import PostTags from "../global-components/Molecules/PostTags";
-
 export default {
-  components: { PostTags },
   mounted() {
     console.log(this);
   },

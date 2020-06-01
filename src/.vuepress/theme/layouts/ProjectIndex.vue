@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="w-full max-w-screen-lg mx-auto p-8 flex flex-wrap">
+    <div class="w-full max-w-screen-lg mx-auto p-8 flex">
       <div class="w-full md:w-4/5 md:pr-2">
         <ul id="default-layout">
           <li v-for="page in $pagination.pages" class="card">
@@ -10,9 +10,9 @@
               </router-link>
             </h2>
             <div class="flex flex-wrap">
-              <pill-item v-for="tag in page.frontmatter.tag">
+              <div class="pill" v-for="tag in page.frontmatter.tag">
                 {{ tag }}
-              </pill-item>
+              </div>
             </div>
           </li>
         </ul>
@@ -52,9 +52,3 @@
     </div>
   </div>
 </template>
-<script>
-import PillItem from "../global-components/Atoms/pill-item";
-export default {
-  components: { PillItem },
-};
-</script>

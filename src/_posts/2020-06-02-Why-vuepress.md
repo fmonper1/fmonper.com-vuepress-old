@@ -17,3 +17,7 @@ export default {
     components: { DefaultGlobalLayout: GlobalLayout, SearchBox },
 };
 ```
+
+gfgf
+
+inline `code`
