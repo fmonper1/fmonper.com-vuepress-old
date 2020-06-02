@@ -6,12 +6,12 @@
 @import "./searchBox";
 
 h1 {
-  @apply text-5xl  text-heading my-4;
+  @apply text-3xl text-heading my-4;
   font-family: "Arvo", serif;
 }
 
 h2 {
-  @apply text-3xl  text-heading my-4;
+  @apply text-2xl  text-heading my-4;
   font-family: "Arvo", serif;
 }
 
@@ -19,10 +19,27 @@ h3 {
   @apply text-xl  text-heading my-2;
   font-family: "Arvo", serif;
 }
+
 p {
   @apply my-4;
 }
 
+@screen md {
+  h1 {
+    @apply text-5xl  text-heading my-4;
+    font-family: "Arvo", serif;
+  }
+
+  h2 {
+    @apply text-3xl  text-heading my-4;
+    font-family: "Arvo", serif;
+  }
+
+  h3 {
+    @apply text-xl  text-heading my-2;
+    font-family: "Arvo", serif;
+  }
+}
 body {
   @apply text-paragraph;
   font-size: 1.1rem;

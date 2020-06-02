@@ -2,27 +2,35 @@
   <div>
     <div class="section text-paragraph">
       <div class="w-full max-w-screen-lg mx-auto p-8">
-        <h1>
+        <h1 class="text-5xl md:text-6xl">
           Hi, i'm <br />
           Fernando <br />
           Montero
         </h1>
         <p>Software Engineer & <br />Full-stack Developer</p>
-        <a
-          href="https://www.linkedin.com/in/fmonper1/"
-          class="btn inline-block"
-        >
-          <fa-icon icon="linkedin" />
-          LinkedIn
-        </a>
-        <a href="https://github.com/fmonper1" class="btn inline-block">
-          <fa-icon icon="github" />
-          Github
-        </a>
-        <a href="https://codepen.io/fmonper1" class="btn inline-block">
-          <fa-icon icon="codepen" />
-          Codepen
-        </a>
+        <div class="flex flex-col sm:flex-row">
+          <a
+            href="https://www.linkedin.com/in/fmonper1/"
+            class="btn inline-block my-2 sm:my-0 sm:mr-2"
+          >
+            <fa-icon icon="linkedin" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/fmonper1"
+            class="btn inline-block my-2 sm:my-0 sm:mx-2"
+          >
+            <fa-icon icon="github" />
+            Github
+          </a>
+          <a
+            href="https://codepen.io/fmonper1"
+            class="btn inline-block my-2 sm:my-0 sm:ml-2"
+          >
+            <fa-icon icon="codepen" />
+            Codepen
+          </a>
+        </div>
       </div>
     </div>
 

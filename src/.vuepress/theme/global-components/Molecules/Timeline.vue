@@ -1,6 +1,7 @@
 <template>
   <div id="timeline">
     <div>
+      <div>2020 - curently</div>
       <h3>Medano Solutions</h3>
       <p class="my-0">Front-end developer</p>
       <p>
@@ -10,6 +11,8 @@
       </p>
     </div>
     <div>
+      <div>2020</div>
+
       <h3>Programming & front-end web design course</h3>
       <p class="my-0">Escuela Organización Industrial</p>
       <p>
@@ -25,6 +28,7 @@
       </div>
     </div>
     <div>
+      <div>2019-2020</div>
       <h3>Chiquitaweb</h3>
       <p class="my-0">Software Engineer</p>
       <p>
@@ -40,6 +44,7 @@
       </div>
     </div>
     <div>
+      <div>2018-2019</div>
       <h3>Masters in Software Engineering</h3>
       <p class="my-0">University of Sheffield</p>
       <p>
@@ -51,10 +56,12 @@
         <i class="devicon-nodejs-plain text-5xl"></i>
         <i class="devicon-android-plain text-5xl"></i>
         <i class="devicon-javascript-plain text-5xl"></i>
-        <i class="devicon-rails-plain text-5xl"></i>
+        <i class="devicon-express-original text-5xl"></i>
       </div>
     </div>
     <div>
+      <div>2017-2018</div>
+
       <h3>Preeze</h3>
       <p class="my-0">Full-stack Developer</p>
       <p>
@@ -70,6 +77,8 @@
       </div>
     </div>
     <div>
+      <div>2015-2018</div>
+
       <h3>Degree in Software Engineering</h3>
       <p class="my-0">University of Sheffield</p>
       <p>
@@ -112,18 +121,18 @@ $white: #ffffff;
   @apply text-paragraph;
 
   //numbers
-  &:before {
-    @apply bg-accent text-heading;
-    content: counter(section);
-    position: absolute;
-    border-radius: 50%;
-    height: 2em;
-    width: 2em;
-    text-align: center;
-    line-height: 2em;
-    color: #ffffff;
-    font-size: 1em;
-  }
+  // &:before {
+  //   @apply bg-accent text-heading;
+  //   content: counter(section);
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   height: 2em;
+  //   width: 2em;
+  //   text-align: center;
+  //   line-height: 2em;
+  //   color: #ffffff;
+  //   font-size: 1em;
+  // }
 }
 //odd number borders
 #timeline > div:nth-child(odd) {
@@ -131,11 +140,11 @@ $white: #ffffff;
   border-left: 0;
   padding-left: 0;
 
-  &:before {
-    left: 100%;
-    margin-left: -17px;
-    background: #d53a9d;
-  }
+  // &:before {
+  //   left: 100%;
+  //   margin-left: -17px;
+  //   background: #d53a9d;
+  // }
 }
 //even number borders
 #timeline > div:nth-child(even) {
@@ -144,10 +153,10 @@ $white: #ffffff;
 
   padding-right: 0;
 
-  &:before {
-    right: 100%;
-    margin-right: -17px;
-  }
+  // &:before {
+  //   right: 100%;
+  //   margin-right: -17px;
+  // }
 }
 //handle first and last
 #timeline > div:first-child {
