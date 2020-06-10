@@ -4,22 +4,22 @@
       <div>2020 - curently</div>
       <h3>Medano Solutions</h3>
       <p class="my-0">Front-end developer</p>
-      <p>
+      <!-- <p>
         Doggo ipsum long bois lotsa pats blep. What a nice floof ruff super chub
         very good spot, the neighborhood pupper lotsa pats. Borkdrive shibe
         shoober what a nice floof, borking doggo.
-      </p>
+      </p> -->
     </div>
     <div>
       <div>2020</div>
 
       <h3>Programming & front-end web design course</h3>
       <p class="my-0">Escuela Organización Industrial</p>
-      <p>
+      <!-- <p>
         Shoober shooberino adorable doggo many pats, heckin good boys many pats
         pupper wrinkler, corgo maximum borkdrive. A frighten puggo wow very
         biscit.
-      </p>
+      </p> -->
       <div class="flex justify-between md:w-1/2 my-4">
         <i class="devicon-babel-original text-5xl"></i>
         <i class="devicon-vuejs-plain text-5xl"></i>
@@ -31,11 +31,11 @@
       <div>2019-2020</div>
       <h3>Chiquitaweb</h3>
       <p class="my-0">Software Engineer</p>
-      <p>
+      <!-- <p>
         Big ol h*ck adorable doggo vvv smol borking doggo with a long snoot for
         pats big ol, he made many woofs doing me a frighten puggo wow very
         biscit, ruff fat boi ruff long doggo.
-      </p>
+      </p> -->
       <div class="flex justify-between md:w-1/2 my-4">
         <i class="devicon-wordpress-plain text-5xl"></i>
         <i class="devicon-photoshop-plain text-5xl"></i>
@@ -47,11 +47,11 @@
       <div>2018-2019</div>
       <h3>Masters in Software Engineering</h3>
       <p class="my-0">University of Sheffield</p>
-      <p>
+      <!-- <p>
         Big ol h*ck adorable doggo vvv smol borking doggo with a long snoot for
         pats big ol, he made many woofs doing me a frighten puggo wow very
         biscit, ruff fat boi ruff long doggo.
-      </p>
+      </p> -->
       <div class="flex justify-between md:w-1/2 my-4">
         <i class="devicon-nodejs-plain text-5xl"></i>
         <i class="devicon-android-plain text-5xl"></i>
@@ -64,11 +64,11 @@
 
       <h3>Preeze</h3>
       <p class="my-0">Full-stack Developer</p>
-      <p>
+      <!-- <p>
         Long bois mlem I am bekom fat wrinkler puggo maximum borkdrive big ol
         pupper I am bekom fat, fluffer vvv adorable doggo lotsa pats snoot. I am
         bekom fat ur givin me a spook length boy wow very biscit very good spot.
-      </p>
+      </p> -->
       <div class="flex justify-between md:w-1/2 my-4">
         <i class="devicon-javascript-plain text-5xl"></i>
         <i class="devicon-express-original text-5xl"></i>
@@ -81,11 +81,11 @@
 
       <h3>Degree in Software Engineering</h3>
       <p class="my-0">University of Sheffield</p>
-      <p>
+      <!-- <p>
         Big ol h*ck adorable doggo vvv smol borking doggo with a long snoot for
         pats big ol, he made many woofs doing me a frighten puggo wow very
         biscit, ruff fat boi ruff long doggo.
-      </p>
+      </p> -->
       <div class="flex flex-wrap justify-between w-full sm:w-1/2 my-4">
         <i class="devicon-git-plain text-5xl"></i>
         <i class="devicon-java-plain text-5xl"></i>

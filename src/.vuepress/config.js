@@ -4,7 +4,9 @@ module.exports = {
     "The bible of Counter Strike Global Offensive commands, settings and mods.",
   dest: "pages",
   base: "/",
-
+  themeConfig: {
+    smoothScroll: true,
+  },
   head: [
     [
       "link",

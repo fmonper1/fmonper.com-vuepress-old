@@ -63,7 +63,7 @@ a {
 }
 
 .card {
-  @apply p-4 rounded-md;
+  @apply p-4 rounded-md mb-4;
   h2,
   h3 {
     @apply my-0 mb-2;
@@ -79,5 +79,13 @@ button {
   @apply bg-accent font-bold rounded-sm text-heading py-1 px-2 mr-2 mb-2;
 }
 
+p > code {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  @apply rounded-sm px-1 py-1;
+}
 @tailwind components;
 @tailwind utilities;

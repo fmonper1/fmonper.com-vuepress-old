@@ -1,5 +1,5 @@
 <template>
-  <div id="global-layout">
+  <div id="global-layout" class="flex flex-col min-h-screen">
     <header
       class="bg-section p-4 text-paragraph flex items-center justify-between"
     >
@@ -14,7 +14,7 @@
         <SearchBox class="block ml-4" />
       </div>
     </header>
-    <DefaultGlobalLayout />
+    <DefaultGlobalLayout class="flex-grow" />
     <footer class="bg-accent text-heading py-4 px-8">
       <a href="https://github.com/fmonper1/fmonper.com" class="text-heading">
         Github
