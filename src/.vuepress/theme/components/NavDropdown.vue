@@ -15,7 +15,7 @@
 
     <div class="block lg:hidden">
       <button
-        class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
+        class="flex items-center px-3 py-2 border rounded text-white border-white "
         @click="isOpen = !isOpen"
       >
         <svg

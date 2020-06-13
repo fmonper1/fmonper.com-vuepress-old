@@ -1,12 +1,9 @@
 module.exports = {
   title: "fmonper",
-  description:
-    "The bible of Counter Strike Global Offensive commands, settings and mods.",
+  description: "Hi, im a full-stack developer from the Canary Islands",
   dest: "pages",
   base: "/",
-  themeConfig: {
-    smoothScroll: true,
-  },
+
   head: [
     [
       "link",
@@ -31,6 +28,8 @@ module.exports = {
   ],
 
   plugins: [
+    ["vuepress-plugin-smooth-scroll"],
+    ["vuepress-plugin-table-of-contents"],
     [
       "@vuepress/blog",
       {

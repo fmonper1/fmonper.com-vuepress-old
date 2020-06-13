@@ -3,16 +3,23 @@
     <div class="w-full max-w-screen-lg mx-auto p-8 flex flex-wrap">
       <div class="w-full md:w-4/5 md:pr-2">
         <ul id="default-layout">
-          <li v-for="page in $pagination.pages" class="card">
-            <h2>
-              <router-link class="page-link" :to="page.path">
-                {{ page.title }}
-              </router-link>
-            </h2>
-            <div class="flex flex-wrap">
-              <pill-item v-for="tag in page.frontmatter.tag">
-                {{ tag }}
-              </pill-item>
+          <li v-for="page in $pagination.pages" class="card flex flex-row">
+            <div
+              class="hidden sm:block bg-accent w-20 h-20 mr-4 flex-shrink-0 rounded-sm"
+            ></div>
+            <div>
+              <h5 class="text-alternative">{{ page.frontmatter.tag[0] }}</h5>
+              <h2>
+                <router-link class="page-link" :to="page.path">
+                  {{ page.title }}
+                </router-link>
+              </h2>
+              <div v-html="page.excerpt"></div>
+              <div class="flex flex-wrap">
+                <pill-item v-for="tag in page.frontmatter.tag">
+                  {{ tag }}
+                </pill-item>
+              </div>
             </div>
           </li>
         </ul>

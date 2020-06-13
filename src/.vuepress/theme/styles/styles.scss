@@ -94,14 +94,19 @@ p > code {
   padding-left: 0.8em;
   border-left: 4px solid rgb(239, 187, 53);
 }
-.post-entry h2,
-.post-entry h3 {
-  display: flex;
+.post-entry {
+  h2,
+  h3 {
+    display: flex;
+    .header-anchor {
+      margin: 0 5px 0 0;
+    }
+  }
 }
-.post-entry h2 .header-anchor,
-.post-entry h3 .header-anchor {
-  margin: 0 5px 0 0;
-}
+// .post-entry h2 .header-anchor,
+// .post-entry h3 .header-anchor {
+//   margin: 0 5px 0 0;
+// }
 .post-entry h2::after,
 .post-entry h3::after {
   content: " ";
@@ -128,6 +133,26 @@ p > code {
     rgb(239, 187, 53),
     rgba(3, 218, 198, 0.18)
   );
+}
+#post-toc {
+  ul {
+    @apply list-inside list-decimal text-alternative;
+    li {
+      @apply text-base;
+      &::after {
+        width: 2.5rem;
+        height: 2px;
+        content: " ";
+        display: block;
+        @apply bg-accent mx-auto my-4;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @tailwind components;
