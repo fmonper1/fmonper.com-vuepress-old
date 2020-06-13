@@ -87,5 +87,48 @@ p > code {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   @apply rounded-sm px-1 py-1;
 }
+.post-entry > * {
+  @apply my-6;
+}
+.post-entry > p:first-child {
+  padding-left: 0.8em;
+  border-left: 4px solid rgb(239, 187, 53);
+}
+.post-entry h2,
+.post-entry h3 {
+  display: flex;
+}
+.post-entry h2 .header-anchor,
+.post-entry h3 .header-anchor {
+  margin: 0 5px 0 0;
+}
+.post-entry h2::after,
+.post-entry h3::after {
+  content: " ";
+  height: 3px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: auto;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  background: linear-gradient(to right, #7f5af0 0%, #d53a9d 100%);
+
+  margin: 0.75em 2px 0px 5px;
+  border-radius: 2px;
+}
+.post-entry h3 .header-anchor {
+  @apply text-alternative;
+}
+.post-entry h3::after {
+  background: linear-gradient(
+    to right,
+    rgb(239, 187, 53),
+    rgba(3, 218, 198, 0.18)
+  );
+}
+
 @tailwind components;
 @tailwind utilities;

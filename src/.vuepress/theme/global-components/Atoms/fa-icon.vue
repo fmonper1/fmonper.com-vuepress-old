@@ -7,7 +7,7 @@
 </template>
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {} from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faNodeJs,
@@ -22,6 +22,8 @@ export default {
   computed: {
     icons() {
       switch (this.icon) {
+        case "bars":
+          return faBars;
         case "react":
           return faReact;
         case "node":

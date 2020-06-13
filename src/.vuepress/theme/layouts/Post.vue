@@ -1,7 +1,11 @@
 <template>
   <div class="section">
-    <div class="w-full max-w-screen-md mx-auto p-8">
-      <Content />
+    <div class="w-full max-w-screen-md mx-auto p-4 py-8">
+      <h3 class="text-center text-alternative">
+        {{ $page.frontmatter.tag[0] }}
+      </h3>
+      <h1 class="text-center text-accent">{{ $page.frontmatter.title }}</h1>
+      <Content class="post-entry" />
       <h3>Tags</h3>
       <PostTags :data="$page.frontmatter.tag" />
       <div id="pagination" v-if="$pagination">

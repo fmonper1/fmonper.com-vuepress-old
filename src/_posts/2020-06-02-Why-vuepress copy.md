@@ -1,11 +1,10 @@
 ---
+title: Blogging With Vuepress
 tag:
   - vue
   - vuepress
 date: 2020-06-02
 ---
-
-# Why Vuepress
 
 - VueConf
 - VueConf

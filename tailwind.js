@@ -16,6 +16,7 @@ module.exports = {
         heading: "#fffffe",
         accent: "#7f5af0",
         paragraph: "#94a1b2",
+        alternative: "rgb(239, 187, 53)",
       },
     },
   },
