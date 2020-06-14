@@ -18,69 +18,67 @@
               Next
             </router-link>
           </div>
+
+          <h3 class="mt-4">Share the love</h3>
+          <social-share />
+
+          <div id="stickyStop"></div>
         </div>
-        <div class="hidden pl-4 md:block md:w-4/12 lg:w-3/12">
+
+        <div id="sidebar" class="hidden pl-4 md:block md:w-4/12 lg:w-3/12">
           <div id="sidebarRef"></div>
           <div id="post-toc">
-            <div class="p-2 rounded-sm bg-sectionAlt">
-              <div
-                class="flex items-center justify-center w-8 h-8 -mt-4 -ml-4 rounded-full bg-sectionAlt"
-              >
-                <fa-icon icon="bars" />
-              </div>
-              <TOC :include-level="[2, 2]" />
-            </div>
+            <SidebarCard> <TOC :include-level="[2, 2]" /> </SidebarCard>
           </div>
         </div>
       </div>
     </div>
-    <div class="w-full max-w-screen-lg p-4 py-8 mx-auto">
-      <div id="stickyStop"></div>
-      klk<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </div>
+    <div class="w-full max-w-screen-lg p-4 py-8 mx-auto"></div>
   </div>
 </template>
 
 <script>
 import PostTags from "../global-components/Molecules/PostTags";
-import FaIcon from "../global-components/Atoms/fa-icon";
+import SidebarCard from "./SidebarCard";
 
 export default {
-  components: { PostTags, FaIcon },
+  components: { SidebarCard, PostTags },
   mounted() {
     console.log(this);
     const toc = document.getElementById("post-toc");
-    const sidebar = document.getElementById("sidebarRef");
+    const sidebar = document.getElementById("sidebar");
+    const sidebarRef = document.getElementById("sidebarRef");
+
     const bottomLimit = document.getElementById("stickyStop");
     let currentWidth = getComputedStyle(sidebarRef).width;
     const stop = toc.offsetTop - 60;
-    const bottomStop = bottomLimit.offsetTop - 60;
-    console.log("bottomStop", bottomStop);
+    const bottomStop = bottomLimit.offsetTop;
 
     window.onresize = (e) => {
       currentWidth = getComputedStyle(sidebarRef).width;
       toc.style.width = `${currentWidth}`;
     };
 
-    window.onscroll = function(e) {
-      const scrollPosition =
-        window.pageYOffset !== undefined
-          ? window.pageYOffset
-          : (
-              document.documentElement ||
-              document.body.parentNode ||
-              document.body
-            ).scrollPosition;
-      console.log(scrollPosition, toc.offsetTop, bottomStop);
-      // toc.offsetTop;
+    window.onscroll = (e) => {
+      const scrollPosition = window.pageYOffset;
 
-      if (scrollPosition >= bottomStop - (toc.offsetTop + toc.offsetHeight)) {
-        toc.className = "absolute";
+      if (scrollPosition >= bottomStop - toc.offsetHeight) {
+        console.log("should stop bottom");
+        toc.className = "";
+
+        sidebar.classList =
+          "sticky-bottom hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       } else if (scrollPosition >= stop) {
+        console.log("should be sticky");
         toc.className = "stick";
         toc.style.width = `${currentWidth}`;
+
+        sidebar.classList = " hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       } else {
+        console.log("should reset");
+
         toc.className = "";
+        sidebar.classList = " hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       }
     };
   },
@@ -92,7 +90,10 @@ export default {
   top: 0;
   margin: 60px 0 0;
 }
-.absolute {
-  position: absolute;
+.sticky-bottom {
+  display: flex;
+  align-content: flex-end;
+  justify-items: flex-end;
+  align-items: flex-end;
 }
 </style>

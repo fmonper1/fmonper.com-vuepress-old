@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-wrap">
     <pill-item v-for="tag in data">
-      {{ tag }}
+      <router-link :to="`/tag/${tag}`" class="text-white">
+        {{ tag }}
+      </router-link>
     </pill-item>
   </div>
 </template>

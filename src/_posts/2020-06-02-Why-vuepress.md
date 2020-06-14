@@ -20,28 +20,32 @@ The default VuePress installation isn't meant to be used for blogging out of the
 
 ## The default theme
 
-When you create a VuePress project, you'll be using the default theme which comes configured with many cool plugins such as auto-generated sidebars, a searchbox, active headers links, etc...
+When you create a VuePress project, you'll be using the default theme which comes configured with many cool plugins such as auto-generated sidebars, a search box, active headers links, etc...
 
 You can expand on this functionality using the many official and community made plugins that are available for VuePress. [This repo](https://github.com/vuepressjs/awesome-vuepress) contains a curated collection of VuePress plugins, themes and resources.
 
-The default theme probably works for most use cases, but the fact that is uses Stylus as the CSS preprocessor (which I don't like), and that it's catered towards documentation websites made me want to create my own theme from scratch.
+The default theme probably works for most use cases, but the fact that is uses Stylus as the CSS pre-processor (which I don't like), and that it's catered towards documentation websites made me want to create my own theme from scratch.
 
 ### Extending the default theme
 
-Extending a theme is requires us to create some specific folders for VuePress to find our custom components. The folder structure I'm using looks something like this:
+Extending a theme requires us to create some specific folders for VuePress to find our custom components. The folder structure I'm using looks something like this:
 
 ```
 .
 ├── src
 │   ├── .vuepress (Optional)
-│   │   ├── components (Optional)
-│   │   ├── global-components (Optional)
-│   │   ├── layouts (Optional)
-│   │   │   └── Layout.vue
-│   │   ├── public (Optional)
-│   │   ├── styles (Optional)
-│   │   │   ├── index.styl
-│   │   │   └── palette.styl
+│   │   ├── theme
+│   │   │   ├── global-components (Optional)
+│   │   │   ├── components (Optional)
+│   │   │   │   ├── BlogIndex.vue
+│   │   │   │   ├── Post.vue
+│   │   │   │   ├── Tags.vue
+│   │   │   │   ├── Tag.vue
+│   │   │   │   └── Layout.vue
+│   │   │   ├── public (Optional)
+│   │   │   ├── styles (Optional)
+│   │   │   │   ├── index.styl
+│   │   │   │   └── palette.styl
 │   │   ├── config.js (Optional)
 │   │   └── enhanceApp.js (Optional)
 │   │
@@ -65,9 +69,9 @@ We can do the same with any VuePress theme, if you want to learn more, check the
 
 ## Writing a custom theme
 
-Making a theme from scratch for VuePress is pretty easy, so easy that all you need are [70 lines of code](https://github.com/ulivz/70-lines-of-vuepress-blog-theme).
+Developing a custom theme is out of the scope of this post, but if you want to lean more about theme development for VuePress, you should check our the [official documentation](https://vuepress.vuejs.org/theme/writing-a-theme.html)
 
-If you want to lean more about theme development for VuePress, you should check our the ["writing a theme" page of the documentation](https://vuepress.vuejs.org/theme/writing-a-theme.html)
+Making a theme from scratch for VuePress is pretty easy, so easy that all you need are [70 lines of code](https://github.com/ulivz/70-lines-of-vuepress-blog-theme).
 
 ## Setting up the blog plugin
 
@@ -146,7 +150,7 @@ If we create our theme from scratch, we won't benefit from all the functionality
 Lets install the smooth-scroll, search box and sitemap plugins:
 
 ```
-npm i -D vuepress-plugin-smooth-scroll @vuepress/plugin-search vuepress-plugin-sitemap
+npm i -D vuepress-plugin-smooth-scroll @vuepress/plugin-search vuepress-plugin-sitemap vuepress-plugin-social-share
 ```
 
 Now to include them in our theme, we must add them to our `config.js`.
@@ -166,5 +170,40 @@ plugins: [
       hostname: "https://fmonper.com",
     },
   ],
+  [
+    "social-share",
+    {
+      networks: ["twitter", "facebook", "reddit", "telegram", "email"],
+      twitterUser: "big_fofer",
+      fallbackImage: "/social-share.png",
+      autoQuote: true,
+      noGlobalSocialShare: true,
+    },
+  ],
 ];
 ```
+
+### Using the search box
+
+Now that the plugin is installed and declared in our config, we can import the component in any of our .vue files.
+
+```js
+import SearchBox from "@SearchBox";
+
+export default {
+  name: "NavBar",
+  components: { SearchBox },
+};
+```
+
+### Using the social share
+
+With the plugin in our `config.js` we can simply use the component anywhere and it will display a list of social icons.
+
+```js
+<social-share />
+```
+
+## Wrapping it up
+
+We've seen how to install and setup a blog using VuePress, how to configure the blog plugin to display the markdown files in our `_posts` folder, how to create pages for our tags, and how to use functionality from the default theme in our custom theme.

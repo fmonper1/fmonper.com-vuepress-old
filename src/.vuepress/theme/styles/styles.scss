@@ -80,7 +80,7 @@ button {
   @apply rounded-sm bg-accent text-heading py-1 px-2;
 }
 .pill {
-  @apply bg-accent font-bold rounded-sm text-heading py-1 px-2 mr-2 mb-2;
+  @apply bg-accent font-bold rounded-sm text-heading text-base py-0 px-2 mr-2 mb-2;
 }
 
 p > code {

@@ -69,10 +69,8 @@
               <li>RESTful API Services</li>
               <li>SQL / MySql</li>
               <li>MongoDb / Mongoose</li>
+              <li>Java</li>
             </ul>
-            <p>
-              Node.js, npm, git, Docker, Ubuntu, Ruby, Rails, Jira...
-            </p>
           </div>
         </div>
       </div>

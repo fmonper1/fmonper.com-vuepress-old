@@ -31,6 +31,16 @@ module.exports = {
     ["vuepress-plugin-smooth-scroll"],
     ["vuepress-plugin-table-of-contents"],
     [
+      "social-share",
+      {
+        networks: ["twitter", "facebook", "reddit", "telegram", "email"],
+        twitterUser: "big_fofer",
+        fallbackImage: "/social-share.png",
+        autoQuote: true,
+        noGlobalSocialShare: true,
+      },
+    ],
+    [
       "@vuepress/blog",
       {
         globalPagination: {
@@ -71,13 +81,14 @@ module.exports = {
         ],
         frontmatters: [
           {
+            title: "",
             id: "tag",
             keys: ["tag", "tags"],
             path: "/tag/",
             // Layout of the `entry page`
             layout: "Tags",
             // Layout of the `scope page`
-            scopeLayout: "Tag",
+            scopeLayout: "BlogIndex",
             pagination: {
               lengthPerPage: 3,
               layout: "Tags",

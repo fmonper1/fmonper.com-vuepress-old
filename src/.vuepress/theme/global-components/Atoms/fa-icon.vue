@@ -1,13 +1,13 @@
 <template>
   <font-awesome-icon
     :icon="icons"
-    :size="size"
+    size="xs"
     class="text-base"
   ></font-awesome-icon>
 </template>
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTags } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faNodeJs,
@@ -38,7 +38,8 @@ export default {
           return faCodepen;
         case "linkedin":
           return faLinkedin;
-
+        case "tags":
+          return faTags;
         default:
           return "";
       }
