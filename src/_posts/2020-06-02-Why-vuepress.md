@@ -26,6 +26,43 @@ You can expand on this functionality using the many official and community made 
 
 The default theme probably works for most use cases, but the fact that is uses Stylus as the CSS preprocessor (which I don't like), and that it's catered towards documentation websites made me want to create my own theme from scratch.
 
+### Extending the default theme
+
+Extending a theme is requires us to create some specific folders for VuePress to find our custom components. The folder structure I'm using looks something like this:
+
+```
+.
+├── src
+│   ├── .vuepress (Optional)
+│   │   ├── components (Optional)
+│   │   ├── global-components (Optional)
+│   │   ├── layouts (Optional)
+│   │   │   └── Layout.vue
+│   │   ├── public (Optional)
+│   │   ├── styles (Optional)
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── config.js (Optional)
+│   │   └── enhanceApp.js (Optional)
+│   │
+│   ├── README.md (your index page)
+│   ├── _posts
+│   │   ├── your_first_post.md
+│   │   └── your_second_post.md
+│
+└── package.json
+```
+
+All of our theme configuration will reside inside `src/.vuepress`. To extend the default theme we will include the following in our `enhanceApp.js`
+
+```js
+module.exports = {
+  extend: "@vuepress/theme-default",
+};
+```
+
+We can do the same with any VuePress theme, if you want to learn more, check the [theme inheritance documentation](https://vuepress.vuejs.org/theme/inheritance.html).
+
 ## Writing a custom theme
 
 Making a theme from scratch for VuePress is pretty easy, so easy that all you need are [70 lines of code](https://github.com/ulivz/70-lines-of-vuepress-blog-theme).
@@ -40,7 +77,7 @@ The setup is pretty easy, install the plugin and add it to the config file. I re
 npm install -D @vuepress/plugin-blog
 ```
 
-Below you can find my configuration, it's pretty self explanatory, the layout value for the directories is the Vue component that shows our list of posts, and the scopeLayout is the component for the actual post.
+Below you can find an example configuration, it's pretty self explanatory, the layout value for the directories is the Vue component that shows our list of posts, and the scopeLayout is the component for the actual post.
 
 ```js
 plugins: [
@@ -90,6 +127,44 @@ The plugin will now look for markdown files inside our `src/_posts` folder and w
 
 You can check out the [repo](https://github.com/fmonper1/fmonper.com/) to see the project structure, as well as the [BlogIndex Component](https://github.com/fmonper1/fmonper.com/blob/master/src/.vuepress/theme/layouts/BlogIndex.vue) and the [Post Component](https://github.com/fmonper1/fmonper.com/blob/master/src/.vuepress/theme/layouts/Post.vue).
 
+We need to add some Frontmatter to our pages written in Markdown so that the Blog plugin can filter and paginate our content. The basic frontmatter appears the first thing in a .md file and includes a title, some tags and a date:
+
+```toml
+---
+title: Blogging With Vuepress
+tag:
+  - vue
+  - vuepress
+date: 2020-06-02
+---
+```
+
 ## Extending functionality with plugins
 
 If we create our theme from scratch, we won't benefit from all the functionality that comes with the default theme. Luckily, we can still use this functionality by installing it as plugins in our project and including it in our `config.js`.
+
+Lets install the smooth-scroll, search box and sitemap plugins:
+
+```
+npm i -D vuepress-plugin-smooth-scroll @vuepress/plugin-search vuepress-plugin-sitemap
+```
+
+Now to include them in our theme, we must add them to our `config.js`.
+
+```js
+plugins: [
+  ["vuepress-plugin-smooth-scroll"],
+  [
+    "@vuepress/search",
+    {
+      searchMaxSuggestions: 10,
+    },
+  ],
+  [
+    "sitemap",
+    {
+      hostname: "https://fmonper.com",
+    },
+  ],
+];
+```

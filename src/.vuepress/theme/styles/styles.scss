@@ -5,6 +5,10 @@
 @import "./prism";
 @import "./searchBox";
 
+* {
+  transition: all 0.5s ease;
+}
+
 h1 {
   @apply text-3xl text-heading my-4;
   font-family: "Arvo", serif;

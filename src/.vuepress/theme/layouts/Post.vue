@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div class="w-full max-w-screen-lg mx-auto p-4 py-8">
+    <div class="w-full max-w-screen-lg p-4 py-8 mx-auto">
       <h3 class="text-center text-alternative">
         {{ $page.frontmatter.tag[0] }}
       </h3>
@@ -19,12 +19,12 @@
             </router-link>
           </div>
         </div>
-        <div class="hidden md:block md:w-4/12 lg:w-3/12 pl-4">
+        <div class="hidden pl-4 md:block md:w-4/12 lg:w-3/12">
           <div id="sidebarRef"></div>
           <div id="post-toc">
-            <div class="bg-sectionAlt rounded-sm p-2">
+            <div class="p-2 rounded-sm bg-sectionAlt">
               <div
-                class=" bg-sectionAlt rounded-full -mt-4 -ml-4 w-8 h-8 flex items-center  justify-center "
+                class="flex items-center justify-center w-8 h-8 -mt-4 -ml-4 rounded-full bg-sectionAlt"
               >
                 <fa-icon icon="bars" />
               </div>
@@ -33,6 +33,10 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="w-full max-w-screen-lg p-4 py-8 mx-auto">
+      <div id="stickyStop"></div>
+      klk<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
   </div>
 </template>
@@ -47,8 +51,11 @@ export default {
     console.log(this);
     const toc = document.getElementById("post-toc");
     const sidebar = document.getElementById("sidebarRef");
+    const bottomLimit = document.getElementById("stickyStop");
     let currentWidth = getComputedStyle(sidebarRef).width;
     const stop = toc.offsetTop - 60;
+    const bottomStop = bottomLimit.offsetTop - 60;
+    console.log("bottomStop", bottomStop);
 
     window.onresize = (e) => {
       currentWidth = getComputedStyle(sidebarRef).width;
@@ -56,18 +63,20 @@ export default {
     };
 
     window.onscroll = function(e) {
-      const scrollTop =
+      const scrollPosition =
         window.pageYOffset !== undefined
           ? window.pageYOffset
           : (
               document.documentElement ||
               document.body.parentNode ||
               document.body
-            ).scrollTop;
-      console.log(scrollTop, toc.offsetTop);
+            ).scrollPosition;
+      console.log(scrollPosition, toc.offsetTop, bottomStop);
       // toc.offsetTop;
 
-      if (scrollTop >= stop) {
+      if (scrollPosition >= bottomStop - (toc.offsetTop + toc.offsetHeight)) {
+        toc.className = "absolute";
+      } else if (scrollPosition >= stop) {
         toc.className = "stick";
         toc.style.width = `${currentWidth}`;
       } else {
@@ -82,5 +91,8 @@ export default {
   position: fixed;
   top: 0;
   margin: 60px 0 0;
+}
+.absolute {
+  position: absolute;
 }
 </style>

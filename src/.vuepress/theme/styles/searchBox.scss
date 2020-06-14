@@ -2,8 +2,10 @@
   @apply text-paragraph  right-0;
 
   input {
-    @apply static;
+    @apply static rounded-md;
     padding: 0.5rem 0 0.5rem 2rem;
+    background-color: transparent;
+    margin: 0 5px 0 0;
     &:focus {
       @apply border-accent;
     }
@@ -11,6 +13,13 @@
   .suggestions {
   }
   .suggestion {
-    @apply text-paragraph;
+    a {
+      @apply text-paragraph;
+      .page-title {
+        @apply text-accent;
+      }
+      .header {
+      }
+    }
   }
 }
