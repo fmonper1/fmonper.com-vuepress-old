@@ -8,7 +8,9 @@
     "build": "vuepress build src",
     "predeploy": "echo www.csgoconsole.com > pages/CNAME"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vuepress/plugin-active-header-links": "^1.5.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

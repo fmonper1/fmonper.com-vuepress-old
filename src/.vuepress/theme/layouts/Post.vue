@@ -48,11 +48,9 @@ export default {
     const toc = document.getElementById("post-toc");
     const sidebar = document.getElementById("sidebar");
     const sidebarRef = document.getElementById("sidebarRef");
-
-    const bottomLimit = document.getElementById("stickyStop");
-    let currentWidth = getComputedStyle(sidebarRef).width;
+    const currentWidth = getComputedStyle(sidebarRef).width;
     const stop = toc.offsetTop - 60;
-    const bottomStop = bottomLimit.offsetTop;
+    const bottomStop = document.getElementById("stickyStop").offsetTop;
 
     window.onresize = (e) => {
       currentWidth = getComputedStyle(sidebarRef).width;
@@ -63,20 +61,14 @@ export default {
       const scrollPosition = window.pageYOffset;
 
       if (scrollPosition >= bottomStop - toc.offsetHeight) {
-        console.log("should stop bottom");
         toc.className = "";
-
         sidebar.classList =
           "sticky-bottom hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       } else if (scrollPosition >= stop) {
-        console.log("should be sticky");
         toc.className = "stick";
         toc.style.width = `${currentWidth}`;
-
         sidebar.classList = " hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       } else {
-        console.log("should reset");
-
         toc.className = "";
         sidebar.classList = " hidden pl-4 md:block md:w-4/12 lg:w-3/12";
       }
@@ -88,7 +80,7 @@ export default {
 .stick {
   position: fixed;
   top: 0;
-  margin: 60px 0 0;
+  margin: 60px 0;
 }
 .sticky-bottom {
   display: flex;

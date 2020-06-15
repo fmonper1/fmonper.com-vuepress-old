@@ -41,6 +41,13 @@ module.exports = {
       },
     ],
     [
+      "@vuepress/active-header-links",
+      {
+        sidebarLinkSelector: ".toc-link",
+        headerAnchorSelector: ".header-anchor",
+      },
+    ],
+    [
       "@vuepress/blog",
       {
         globalPagination: {
@@ -152,10 +159,6 @@ module.exports = {
     ],
   ],
   postcss: {
-    plugins: [
-      require("tailwindcss")("./tailwind.js"),
-      require("css-prefers-color-scheme/postcss"),
-      require("autoprefixer"),
-    ],
+    plugins: [require("tailwindcss")("./tailwind.js"), require("autoprefixer")],
   },
 };
