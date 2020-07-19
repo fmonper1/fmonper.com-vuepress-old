@@ -5,7 +5,7 @@
 @import "./prism";
 @import "./searchBox";
 
-* {
+.transition {
   transition: all 0.5s ease;
 }
 
@@ -44,6 +44,7 @@ p {
     font-family: "Arvo", serif;
   }
 }
+
 body {
   @apply text-paragraph;
   font-size: 1.1rem;
@@ -106,6 +107,13 @@ p > code {
       margin: 0 5px 0 0;
     }
   }
+
+  ul {
+    @apply list-inside;
+    li {
+      @apply list-disc;
+    }
+  }
 }
 // .post-entry h2 .header-anchor,
 // .post-entry h3 .header-anchor {
@@ -157,6 +165,12 @@ p > code {
       }
     }
   }
+}
+
+.social-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @tailwind components;

@@ -115,7 +115,7 @@ $white: #ffffff;
   border-image-slice: 1;
   border-width: 3px;
   margin: 0;
-  padding: 40px;
+  padding: 30px 20px;
   counter-increment: section;
   position: relative;
   @apply text-paragraph;

@@ -35,7 +35,7 @@
     </div>
 
     <div class="sectionAlt text-paragraph">
-      <div class="w-full max-w-screen-md p-8 mx-auto">
+      <div class="w-full max-w-screen-lg p-8 mx-auto">
         <div class="flex flex-wrap">
           <div class="w-full">
             <h2>About Me</h2>
@@ -64,17 +64,17 @@
     </div>
     <div class="section text-paragraph">
       <div class="w-full max-w-screen-lg p-8 mx-auto flex flex-wrap">
-        <div class=" w-full ">
+        <div class="w-full">
           <h2>My Skills</h2>
         </div>
-        <div class=" w-full md:w-1/2 px-2">
+        <div class="w-full md:w-1/2 px-2">
           <div class="card flex">
             <div>
               <i class="text-5xl devicon-react-plain"></i>
             </div>
             <div class="pl-4">
               <h3>Front-end</h3>
-              <div class="flex">
+              <div class="flex flex-wrap">
                 <pill-item class="rounded-full font-normal">react</pill-item>
                 <pill-item class="rounded-full font-normal">vue</pill-item>
                 <pill-item class="rounded-full font-normal">parcel</pill-item>
@@ -83,14 +83,14 @@
           </div>
         </div>
 
-        <div class=" w-full md:w-1/2 px-2">
+        <div class="w-full md:w-1/2 px-2">
           <div class="card flex">
             <div>
               <i class="text-5xl devicon-nodejs-plain"></i>
             </div>
             <div class="pl-4">
               <h3>Back-end</h3>
-              <div class="flex">
+              <div class="flex flex-wrap">
                 <pill-item class="rounded-full font-normal">REST</pill-item>
                 <pill-item class="rounded-full font-normal">node.js</pill-item>
                 <pill-item class="rounded-full font-normal">mongo</pill-item>
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <div class=" w-full md:w-1/2 px-2">
+        <div class="w-full md:w-1/2 px-2">
           <div class="card flex">
             <div>
               <i class="text-5xl devicon-devicon-plain"></i>
@@ -109,7 +109,7 @@
               <h3>Analysis</h3>
               <div class="flex flex-wrap">
                 <pill-item class="rounded-full font-normal">
-                  google analytics
+                  analytics
                 </pill-item>
                 <pill-item class="rounded-full font-normal">
                   search console
@@ -118,7 +118,7 @@
             </div>
           </div>
         </div>
-        <div class=" w-full md:w-1/2 px-2">
+        <div class="w-full md:w-1/2 px-2">
           <div class="card flex">
             <div>
               <i class="text-5xl devicon-photoshop-plain"></i>
@@ -158,4 +158,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.pill {
+  font-family: "Arvo";
+}
+</style>

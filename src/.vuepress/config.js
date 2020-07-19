@@ -43,8 +43,8 @@ module.exports = {
     [
       "@vuepress/active-header-links",
       {
-        sidebarLinkSelector: ".toc-link",
-        headerAnchorSelector: ".header-anchor",
+        sidebarLinkSelector: "toc-link",
+        headerAnchorSelector: "header-anchor",
       },
     ],
     [

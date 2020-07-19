@@ -15,7 +15,7 @@
 
     <div class="block lg:hidden">
       <button
-        class="flex items-center px-3 py-2 text-white rounded "
+        class="flex items-center px-3 py-2 text-white rounded"
         :class="isOpen ? 'bg-alternative' : 'bg-accent'"
         @click="isOpen = !isOpen"
       >
@@ -30,8 +30,8 @@
       </button>
     </div>
     <div
-      :class="isOpen ? 'block' : 'hidden'"
-      class="block w-full lg:flex lg:items-center lg:w-auto lg-block"
+      :class="isOpen ? 'h-auto' : 'hidden lg:block'"
+      class="block w-full lg:flex lg:items-center lg:w-auto lg:block"
     >
       <div class="text-sm lg:flex-grow"></div>
 
