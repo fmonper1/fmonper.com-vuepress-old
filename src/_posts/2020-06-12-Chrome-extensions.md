@@ -42,4 +42,4 @@ I had some experience with Parcel, but after some tests I realised that whilst y
 
 Then looking at alternative bundlers I stumbled upon [rollup-plugin-chrome-extension](https://github.com/extend-chrome/rollup-plugin-chrome-extension#readme) which allows me skip all the reloading part and lets me use imports. I just had to figure out how to use React with this parcel plugin.
 
-## React + Rollup + Chrome Extension
+## React + Rollup + Chrome Extension    

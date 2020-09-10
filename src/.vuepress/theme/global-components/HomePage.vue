@@ -1,35 +1,44 @@
 <template>
   <div>
     <div class="section text-paragraph">
-      <div class="w-full max-w-screen-lg p-8 mx-auto md:text-center">
-        <h1 class="text-5xl md:text-6xl">
-          Hi, i'm <br />
-          Fernando <br />
-          Montero
-        </h1>
-        <p class="text-2xl">Software Engineer & <br />Full-stack Developer</p>
-        <div class="flex flex-col mt-2 sm:flex-row md:justify-center">
-          <a
-            href="https://www.linkedin.com/in/fmonper1/"
-            class="inline-block my-2 btn sm:my-0 sm:mr-2"
-          >
-            <fa-icon icon="linkedin" />
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/fmonper1"
-            class="inline-block my-2 btn sm:my-0 sm:mx-2"
-          >
-            <fa-icon icon="github" />
-            Github
-          </a>
-          <a
-            href="https://codepen.io/fmonper1"
-            class="inline-block my-2 btn sm:my-0 sm:ml-2"
-          >
-            <fa-icon icon="codepen" />
-            Codepen
-          </a>
+      <div class="w-full max-w-screen-lg p-8 mx-auto flex flex-wrap">
+        <div class="w-full sm:w-1/3 sm:p-8 flex justify-center">
+          <div>
+            <img src="../../public/avatar.jpg" class="rounded-full" />
+          </div>
+        </div>
+
+        <div class="w-full sm:w-2/3 sm:p-8">
+          <h1 class="text-3xl md:text-5xl">
+            Hi, my name is<br />
+            <span class="text-accent" style="font-size: 140%;"
+              >Fernando Montero.</span
+            ><br />
+            I'm a software engineer
+          </h1>
+          <div class="flex flex-col mt-2 sm:flex-row">
+            <a
+              href="https://www.linkedin.com/in/fmonper1/"
+              class="inline-block my-2 btn sm:my-0 sm:mr-2"
+            >
+              <fa-icon icon="linkedin" />
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/fmonper1"
+              class="inline-block my-2 btn sm:my-0 sm:mx-2"
+            >
+              <fa-icon icon="github" />
+              Github
+            </a>
+            <a
+              href="https://codepen.io/fmonper1"
+              class="inline-block my-2 btn sm:my-0 sm:ml-2"
+            >
+              <fa-icon icon="codepen" />
+              Codepen
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -140,10 +149,10 @@
           </div>
         </div>
       </div>
-      <div class="w-full max-w-screen-lg p-8 mx-auto">
-        <h2>Timeline</h2>
-        <timeline />
-      </div>
+      <!--      <div class="w-full max-w-screen-lg p-8 mx-auto">-->
+      <!--        <h2>Timeline</h2>-->
+      <!--        <timeline />-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
